@@ -73,14 +73,14 @@ const contracts = [
     '0x7469580d483e9832B9C68676b5EA17141bE97df2',
     '0x95907077585b09068A0d8d1185AAB872ec1836c0'
 ]
-const images = []
 
 if (ethereum) {
-    provider = new ethers.providers.Web3Provider(ethereum);
+    provider = new ethers.providers.Web3Provider(ethereum)
 }
 
 if (!provider) {
-    console.error("Your browser is not web3 enabled.");
+    console.error("Your browser is not web3 enabled.")
+    error.classList.remove('d-none')
 }
 
 const cardsSelect = document.querySelector('#cards')
